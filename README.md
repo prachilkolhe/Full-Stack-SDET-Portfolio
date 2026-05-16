@@ -34,7 +34,88 @@ Perfect for QA professionals, SDETs (Software Development Engineers in Test), an
 ---
 
 ## Repository Structure
-Full-Stack-SDET-Portfolio/ │ ├── UI-Automation/ │ ├── Playwright-Python/ │ │ ├── Playwright/ │ │ ├── PlaywrightFramework/ │ │ ├── Pytest/ │ │ ├── Features/ │ │ ├── StepDefinitions/ │ │ ├── conftest.py │ │ └── Python_Basics.py │ │ │ ├── Selenium-Java/ │ │ ├── JavaSelenium/ │ │ ├── JavaSeleniumFramework/ │ │ ├── ExtentReports/ │ │ ├── JavaSeleniumDataDriven.xlsx │ │ ├── .classpath │ │ ├── .project │ │ ├── .settings/ │ │ └── .metadata/ │ │ │ ├── Selenium-Python/ │ │ ├── Selenium/ │ │ ├── Selenium_Python_FW/ │ │ ├── PyTest/ │ │ ├── Selenium Notes │ │ ├── Python Notes.txt │ │ ├── drivers/ │ │ ├── Basic_Datatypes.py │ │ ├── Classes_Objects.py │ │ ├── Exception_Handling.py │ │ ├── Functions.py │ │ ├── Inheritance.py │ │ ├── Loops.py │ │ └── chromedriver-mac-x64/ │ │ │ └── SQL-Gherkin/ │ ├── Gherkin/ │ ├── Selenium/ │ ├── SQL/ │ ├── Tests/ │ ├── pytest/ │ ├── Breaking.py │ ├── Calculator using class function.py │ ├── Class function.py │ ├── Dictionary practise.py │ ├── Inheritance.py │ ├── List Comprehensions.py │ ├── map and lambda function.py │ ├── report.html │ ├── log.html │ └── output.xml │ ├── API-Testing/ │ ├── src/ │ │ ├── JavaRESTAssuredAPITesting/ │ │ ├── CucumberFramework/ │ │ └── Data/ │ │ │ ├── bin/ │ ├── test-output/ │ ├── target/ │ ├── .classpath │ ├── .project │ ├── .settings/ │ ├── pom.xml │ ├── APITestingNotes.txt │ └── LogFile.txt │ ├── Load-Testing/ │ ├── bin/ │ │ ├── report-template/ │ │ │ └── sbadmin2-1.0.7/ │ │ └── [JMeter executables] │ │ │ ├── lib/ │ ├── extras/ │ ├── docs/ │ ├── backups/ │ ├── licenses/ │ ├── printable_docs/ │ ├── LICENSE │ ├── NOTICE │ ├── README.md │ ├── .DS_Store │ └── [Test Plans & Scripts] │ └── README.md
+```text
+ Full-Stack-SDET-Portfolio/
+ ├── API-Testing/
+ │   ├── .classpath
+ │   ├── .project
+ │   ├── .settings/
+ │   ├── APITestingNotes.txt
+ │   ├── LogFile.txt
+ │   ├── bin/
+ │   ├── pom.xml
+ │   ├── src/
+ │   │   ├── CucumberFramework/
+ │   │   ├── Data/
+ │   │   └── JavaRESTAssuredAPITesting/
+ │   ├── target/
+ │   └── test-output/
+ ├── Load-Testing/
+ │   ├── .DS_Store
+ │   ├── LICENSE
+ │   ├── NOTICE
+ │   ├── README.md
+ │   ├── [Test Plans & Scripts]
+ │   ├── backups/
+ │   ├── bin/
+ │   │   ├── [JMeter executables]
+ │   │   └── report-template/
+ │   │       └── sbadmin2-1.0.7/
+ │   ├── docs/
+ │   ├── extras/
+ │   ├── lib/
+ │   ├── licenses/
+ │   └── printable_docs/
+ ├── UI-Automation/
+ │   ├── Playwright-Python/
+ │   │   ├── Features/
+ │   │   ├── Playwright/
+ │   │   ├── PlaywrightFramework/
+ │   │   ├── Pytest/
+ │   │   ├── Python_Basics.py
+ │   │   ├── StepDefinitions/
+ │   │   └── conftest.py
+ │   ├── Selenium-Java/
+ │   │   ├── .classpath
+ │   │   ├── .metadata/
+ │   │   ├── .project
+ │   │   ├── .settings/
+ │   │   ├── ExtentReports/
+ │   │   ├── JavaSelenium/
+ │   │   ├── JavaSeleniumDataDriven.xlsx
+ │   │   └── JavaSeleniumFramework/
+ │   ├── Selenium-Python/
+ │   │   ├── Basic_Datatypes.py
+ │   │   ├── Classes_Objects.py
+ │   │   ├── Exception_Handling.py
+ │   │   ├── Functions.py
+ │   │   ├── Inheritance.py
+ │   │   ├── Loops.py
+ │   │   ├── PyTest/
+ │   │   ├── Python Notes.txt
+ │   │   ├── Selenium/
+ │   │   ├── Selenium Notes
+ │   │   ├── Selenium_Python_FW/
+ │   │   ├── chromedriver-mac-x64/
+ │   │   └── drivers/
+ │   └── SQL-Gherkin/
+ │       ├── Breaking.py
+ │       ├── Calculator using class function.py
+ │       ├── Class function.py
+ │       ├── Dictionary practise.py
+ │       ├── Gherkin/
+ │       ├── Inheritance.py
+ │       ├── List Comprehensions.py
+ │       ├── SQL/
+ │       ├── Selenium/
+ │       ├── Tests/
+ │       ├── log.html
+ │       ├── map and lambda function.py
+ │       ├── output.xml
+ │       ├── pytest/
+ │       └── report.html
+ └── README.md
+```
 
 
 ---
