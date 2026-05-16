@@ -1,0 +1,26 @@
+********************** DataBase Connection connection to Selenium TestCases **********************
+
+1. To create new database --> create database <databaseName>;
+2. Pointing towards any database --> use <databaseName>;
+3. Create tables in database --> create table <tablName>(<columnHeader1> varchar(20), <columnHeader2> int(5), <columnHeader3> varchar(20));
+4. To know the table structure ie, schema --> describe <tableName>;
+5. TO add values in table column --> insert into <tableName> values(<'columnHeader1vlaue'> <varcharValue>, <'columnHeader1vlaue'> <intValue>, <'columnHeader1vlaue'> <varcharValue>);
+
+
+
+
+********************** JDBC Integration **********************
+1. JDBC --> Java Database Connectivity, is a Java API
+2. API that allows Java applications to communicate with various databases like Oracle, MySQL, and SQL Server
+3. Add .jar file --> mysql-connector-java
+4. In .java class file, first need to do connection with DB 
+		Connection con = DriverManager.getConnection(<connectionURL>, <userName>, <password>);
+		NOTE: connectionURL => "jdbc:mysql://"+host+":"+port+"/databaseName"
+		
+		Statement s = con.createStatement();
+		ResultSet rs = s.executeQuery(<enter_your_query_here>)
+		
+		while (rs.next()) 		--> Result store in 'rs' is an Array, so to move to that result which is present at first index we have perform next() method
+		{
+			System.out.Println(rs.getString(<columnName>));		 	--> Will print value present in that column of search query
+		}

@@ -1,0 +1,30 @@
+
+public class JavaOOPSFunctionOverloadingOverriding {
+	
+	public void getData(int userID, String userName) {
+		
+	}
+	
+	public void getData(int userID, int password) {
+		
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		JavaOOPSFunctionOverloadingOverriding a= new JavaOOPSFunctionOverloadingOverriding();
+		
+		a.getData(10, "Prachil");
+		a.getData(10, 12345);
+
+	}
+
+}
+/*
+ 1.	Method OverLoading :-
+ 	When any single class has multiple methods with same method name,
+ 	but different in 
+  					--> No of arguments passing in the method
+ 					--> Data type of arguments
+ */

@@ -1,0 +1,21 @@
+--> Each piece of code should be placed in test method
+--> Test method should be start with test_
+--> Create a class for that test method, name should start with Test
+--> Dont forget about the self parameter of test method which is under class
+--> Use self.driver
+--> Create a neat conftest.py file where you can give step to invoke the browser
+--> Remember about yield keyword
+--> We can use one class which will be assigned to fixture method and pass that class name to required class by inheritance --> Instead of assigning fixture method separately to each class
+
+--> Page Object Mechanism --> All the test cases steps which are related same page of application are included in single class
+                          --> Create the separate class for separate page
+
+--> Without creating separate page object for each page in test case --> we can optimize it at that step where one page is navigating to another page
+                                                                     --> The method which is use to navigate it, declare the page object of next page in that method itself and return <page_object>
+                                                                     --> In test case, create an object for that step which is navigating the page, and in that object you will get the page object of next page
+                                                                     --> So to do next operation in that page, use that object which you created in test case
+
+--> In python, to call the method which we declare in class, firstly we create object of the class then we call method like object.method name
+    but if you want to call the method using classname.method then mark that method as @staticmethod so that you will not required to create the object of class
+    (Selenium_Python_FW/test_AutomatedForm_using_PO.py)
+    --> For static method self parameter is not required

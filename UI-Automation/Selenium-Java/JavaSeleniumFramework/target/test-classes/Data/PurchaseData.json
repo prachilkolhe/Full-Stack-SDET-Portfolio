@@ -1,0 +1,19 @@
+[
+{
+
+	"Email" : "prachil972000@gmail.com" ,
+	"Password" : "Password@123" ,
+	"ProductName" : "ADIDAS ORIGINAL"
+	
+},
+
+{
+	"Email" : "prachil972000@gmail.com" ,
+	"Password" : "Password@123" ,
+	"ProductName" : "ZARA COAT 3"
+	
+}	
+	
+]
+// This has one arrany of two data sets of 3 input parameters for each data set
+// To read this JSON file and send it in one hash map we need to create one method to do this in this same package like as utility

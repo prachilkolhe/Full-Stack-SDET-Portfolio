@@ -1,0 +1,57 @@
+--> Playwright is the powerful automation tool for web UI and API automation ie, front end and back end calls automation
+--> Inbuilt waiting mechanism
+--> Inbuilt logging and screenshots
+--> In python ecosystem, pytest serves as a testing framework that allow us to execute Playwright test using 'pytest-playwright' plugin
+        ==> To install that plugin - pip install pytest-playwright and then run playwright install to install playwright inbuilt browsers
+        ==> For this specific project, we can run test either by Run file option or play button and for command we need to add this '/usr/bin/python3 -m pytest'
+
+--> Datatypes in Python
+    ==> Numeric -> int, float, complex and long(deprecated in the latest version of python)
+    ==> string ->
+    ==> list[] -> allows multiple values and allows different datatype values, List is not immutable means can be manipulate
+    ==> tuple() -> tuple is immutable means can not be manipulate
+    ==> dictionary ->
+
+--> Function => Group of statements that performs a specific task
+             => When functions are not embedded in any class then that is called as functions only
+             => Functions embedded in class called as methods
+--> Classes => User defined blueprint or prototype
+--> pytest => pytest is the test engine in which we write playwright code, function framework is of pytest and code of playwright
+           => For the test function when we add 'test_' or 'test' at starting, then it recognises it as a test and displayed a play button in from of it
+           => For the pytest file, name should be start with test only so that file will be recognise as pytest file
+           => Any function which has @pytest.fixture annotation, then that function can be use by any test function as an argument, eg, suite setup functions
+           => conftest.py file is the universal file we maintained for the fixture methods, so to not mix up for test functions
+                --> file name should exactly same conftest.py, and both test functions file and conftest.py file should remain in same folder path
+           => @pytest.fixture(scope="function") -> run for every function
+           => @pytest.fixture(scope="module") -> run for single time for single file/suite
+           => @pytest.fixture(scope="session") -> run for single time for entire execution, so when we run multiple file then this will run single time only
+           => @pytest.mark.skip -> skips the test in execution
+           => @pytest.mark.<tag_name> -> Tagging the test like smoke, regression
+           => Command to run test/ file in terminal
+                --> pytest <file name>                  --> to run specific single test file
+                --> pytest <file name>::<test name>     --> to run single test from the file
+                --> pytest <file name>::<test name> -s  --> to run single test from the file with logs
+                --> pytest                              --> to run every test present in directory/ folder (for our project run command in terminal 'python3 -m pytest')
+                --> pytest -m <tag_name>                --> to run test using tagging
+                --> pytest -k <test_name_substring>     --> to run test which has <test_name_substring> in it's name by scanning all tests\
+                --> pytest -n <number_of_workers_to_run_all_test>       --> to run all test in parallel for this need to install xdist package (pip3 install xdist)
+
+--> Playwright => pytest is the test engine in which we write playwright code, function framework is of pytest and code of playwright
+               => Command to run test/file in terminal
+                    --> pytest <file name>                       --> to run specific single playwright test file
+                    --> pytest <file name>::<test name>          --> to run single playwright test from the file
+                    --> pytest <file name>::<test name> -header  --> to run single playwright test from the file with headed mode (by default it runs in headeless mode)
+
+--> Playwright Codegen => Using this we can generate the code for the automation script by just performing the action in UI
+                       => Run the command 'playwright codegen <url_link>'
+                       => Perform actions in that page and after completion pause the recording and verify the generated script in background screen
+                       => Syntax is almost correct just need to verify the locator usability
+
+--> HTML Reports => To create the HTML report for the all test result install plugin 'pip3 install pytest-html'
+                 => Command to run test with HTML report generation 'pytest --html=report.html'
+
+--> Generate Logs and Screenshots trace.zip file => Playwright Trace Viewer
+                                            => command 'pytest --tracing on'
+                                                => 'off' - Do not record a trace.
+                                                => 'on' - Record a trace for each test. (not recommended as it's performance heavy)
+                                                => 'retain-on-failure' - Record a trace for each test, but remove it from successful test runs.

@@ -1,0 +1,76 @@
+--> chromedriver path = (/usr/local/bin/chromedriver)
+
+--> Use python console to check small code execution by pasting code there --> Command - python3
+--> For ruby console --> Command - ruby console
+
+--> Shortcut keys to run python file --> ctrl + shift + R
+
+--> Datatypes in Python :- (Reference- https://www.digitalocean.com/community/tutorials/python-data-types)
+1).Numeric - int(numbers), long (long number), float (decimal number), complex (real (i) and imaginary (j) part numbers, eg. 100+10j)
+2). String (str) -
+3). List - [], separated by comma, it is a datatype which have multiple values of different datatypes, Mutable means you can change or update the list
+4). Tuple - (), Immutable means that you cannot update the tuple
+5). Dictionary - Key:Value datatype, {}
+
+-->Loops
+1). if loop --> when condition satisfies print the given condition
+2). else loop --> when if loop's condition doesn't satisfied then print the given condition mentioned in else loop
+3). for loop --> we mentioned the start, end and step of loop i.e. from where to where loop should execute
+4). while loop --> this loop executes until the condition matches
+5). When the condition matches at continue statement it skips all the execution which are being executed after continue statement and restart from the next iteration
+
+
+--> Functions
+In Python, function is a group of related statements that perform the specific task
+
+--> return and print statement difference
+return is used to send a value from a function to its caller
+print is used to display a value to the user
+
+--> OOPs Concepts
+Constructor of Class --> Constructor is one of the method which is called when you create object for that class
+                     --> When you don't create constructor in class then it is automatically called at runtime
+                     --> In python, constructor name should be '__init__', we don't create constructor using class name (which we do in other langg)
+
+--> Two types of Variables
+Class Variable --> Variables which we declare inside the class
+Instance Variable --> Variables which we declare inside the constructor method
+
+--> Inheritance
+Passing the properties of parent class to the child class
+Put the parent class name in child class () --> 'childclassname(parentclassname)''
+import the parent class in child class file --> 'from <file_name> import <classname_to_import>''
+If you do not have default constructor then make sure to import parent constructor into child constructor, if parent class has default constructor then no need to call parent constructor into child constructor
+
+--> Reading the text file in python
+readline() --> Method used to read the text line by line. It prints single line at once
+readlines() --> Method used to read the text file and it prints all line of file at once --> It prints the list of all lines of list
+
+--> Writing the text in file in python
+To open the txt file in read only mode --> file.open(<file_path>, 'r') --> 'r' indicates that the file is opened in read only mode
+To open the txt file in edit mode --> file.open(<file_path>, 'w') --> 'w' indicates that the file is opened in edit mode
+
+--> reversed() function is used to reverse the string or other parameter
+eg. reversed(string_var) --> string_var is the variable which has given string stored into it
+
+--> Exception Handling
+1). 'raise Exception:(<message_to_display>)' --> when condition gets failed then it raise the exception with given message
+2). 'assert(<true_condition>)' --> when given condition gets False then it raises the assertion error, condition should be true here (true condition-- should match to required criteria)
+       --> for eg. assert Hi == Hello, "Given two strings does not matches"
+           -- Here, we asserting the condition like Hi == Hello, it is not matching so it will raise an assertion error with the the message which we given after ','
+           -- This message only prints when assertion is failed, if assertion is passed then message will not print
+3). 'try:'-'except:'(Catch) Mechanism
+        --> Whenever a condition does not satisfied then the test case failed, but if you want to go next block without failure then use 'try_except' block mechanism
+        --> The test case which is gonna to be failed, put that in 'try:' block and followed by 'except:' block where we can display your own customized reason of failure of try block and further test suite execution will go on
+        --> If you don't want to display your own customized failure message -- use 'Exception' keyword, this key has it's own message given by python
+4). 'finally: --> This keyword is associated with try except mechanism, this finally block always executes whether we get error in try block or not
+              --> Even if whole test suite execution fails, still finally block will be execute successfully
+              --> Significance => To clear the data/junk data
+                               => eg. When a test case failed, so some data gets stored and you need fresh or no data for new execution so use finally block, where you implement the step to clean up the data
+
+# Use debugger to know the workflow of loop, also while debugging to know the what value is storing in variable select tah variable while debugging is running, click right click and select option Evaluate expression
+
+--> In python, to call the method which we declare in class, firstly we create object of the class then we call method like object.method name
+    but if you want to call the method using classname.method then mark that method as @staticmethod so that you will not required to create the object of class
+    (Selenium_Python_FW/test_AutomatedForm_using_PO.py)
+    --> For static method self parameter is not required

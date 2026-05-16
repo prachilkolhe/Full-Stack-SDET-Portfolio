@@ -1,0 +1,4 @@
+--> In Python, to read and write data from excel file install a library package --> pip install openpyxl
+--> Give the local path of excel file
+--> Load the active sheet of excel file
+--> Get cell value you want by going through row number and column number

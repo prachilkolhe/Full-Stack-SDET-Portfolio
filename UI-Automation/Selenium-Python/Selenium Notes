@@ -1,0 +1,97 @@
+--> Webdriver is a class in the Selenium package
+--> Service is a class which is used to get the chromedriver from given path
+--> Create a service object of Service class where we give the path of chromedriver, without .exe extension
+--> Browser -- Driver
+    Chrome  -- chromedriver
+    Firefox -- geckodriver
+    MS Edge -- msedgedriver
+
+--> General XPath -- //tagname[@attribute='value']
+                       tagname is value present at the opening of tag i.e.< >
+
+--> To grab the text displaying in banner message in UI --> Use 'text' method after finding that element/banner message
+--> Static Dropdown --> Using 'Select' class for which need to import Select
+                    --> And this class has different methods to inspect the values under static dropdown
+                    --> for eg. Automateform.py file
+--> Dynamic Dropdown --> First inspect the dropdown and then wait for second to get it popup and get the list of the options present in that dynamic dropdown using 'find.elements'
+                     --> Use for loop for the given option
+                         (Selenium/DynamicDropDown_DynamicText_Checkbox_Radio.py)
+
+--> Static Text --> If some text is still present on browser page even after refreshing the page then its a Static Text
+                --> To get static text we use '.text' method which is not helpful to get dynamic text
+--> Dynamic Text --> If some text gets disappear after refreshing the page then its a Dynamic Text
+                 --> To get dynamic text use '.get_attribute("Value")' method
+                    (Selenium/DynamicDropDown_DynamicText_Checkbox_Radio.py)
+
+--> Pop Up --> To handle pop up in selenium -- we need to switch from driver to alert mode using ''.switch_to' method
+           --> In popup -- '.accept()' method means we are accepting the modal condition ie. clicking Ok button
+                        -- '.dismiss()' method means we are discarding the modal condition ie. clicking Cancel button
+                            (Selenium/DynamicDropDown_DynamicText_Checkbox_Radio.py)
+
+--> Chaining of Webelements --> finding the web element from the one searched element
+                            --> first element is search using '.find_elements()' method while other will be search using '.find_element()' method
+                                (Selenium/Wait_Chaining_WebElements.py)
+
+--> Implicit Wait --> Whenever the expected element is not displaying on webpage then it will wait for given seconds
+                  --> If expected element is displaying on webpage then its moves to next step
+                  --> Sometimes extra wait is needed for some special steps (.find_elements) other than implicit wait -- because expected element is being displaying
+                      but results we are wanting are taking time to get load
+                      (Selenium/Wait_Chaining_WebElements.py)
+
+--> Explicit Wait --> When a step is taking a lot of time to load so for that specific step we add explicit wait, without increasing the time of implicit wait
+                  --> Need to import 'WebDriverWait'
+                  --> We can add condition like until I see required element I will wait -- to add condition we need to import a package 'expected_conditions'
+                      (Selenium/Wait_Chaining_WebElements.py)
+
+--> Mouse Actions --> By importing 'ActionChains' class, will able to interact the action of mouse
+                               --> Actions like Mover hovering, drag and drop, long press. right click, double click etc
+                               --> Every action should be ended with '.perform()' method
+                                   (Selenium/DynamicDropDown_DynamicText_Checkbox_Radio.py)
+
+--> Windows Switching --> When we open a child window from current window then the driver is out of scope, driver will not work in child window it will only work for parent window
+                      --> So to switch one window to another window we use '.switch_to.windows[<required_windows_index>]'
+                      --> We can get the list of opened windows using 'windows_handles' method
+                          (Selenium/DynamicDropDown_DynamicText_Checkbox_Radio.py)
+
+--> Frames --> Frame is like when one html is embedded in another base html page
+           --> Can be identified by <iframe></iframe> tags
+           --> To go to frame we need to use 'switch_to' method
+               (Selenium/DynamicDropDown_DynamicText_Checkbox_Radio.py)
+
+--> JavaScriptExecutor --> It is an interface that is used to execute JavaScriprt through selenium webdriver
+                       --> In browser console, when we give command 'window.scrollBy(0,900)' then it automatically scroll the screen from 0 px (top) to 900 px
+                       --> So to automate such operation using selenium we use JavaScriptExecutor
+                       --> We use '.execute_script(""<console_commad>;")' method for this, command should be followed by ;
+                           (Selenium/JavaScriptExecutor_Screenshot _Headless_IgnoreCertificates.py)
+
+--> Screenshot --> To take a screenshot after a step, we use 'driver.get_screenshot_as_file(<filename.png>)'
+               --> That ss will save in file with given name
+                   (Selenium/JavaScriptExecutor_Screenshot _Headless_IgnoreCertificates.py)
+
+--> ChromeOptions --> By using chrom options we give some arguments to chromedriver to do as per our given arguments
+                  --> For that need to import class 'ChromeOptions' from webdriver
+                  --> For more ChromeOptions follow this link -- https://www.programcreek.com/python/example/100025/selenium.webdriver.ChromeOptions
+
+--> Headless --> To run a scenario as headless ie. without opening browser then we use 'ChromeOptions()' class
+             --> Then we create a object fro that class and we add argument 'headless'
+             --> And we give that option for driver object
+                 (Selenium/JavaScriptExecutor_Screenshot _Headless_IgnoreCertificates.py)
+
+--> Ignore Certificate Error --> Sometime after landing on webpage there might be certificate error to go before actual site like 'Your connection is not private', 'there is some risk' or some cookies error
+                             --> So to avoid such error we add argument '--ignore_certificate_errors' to object of ChromeOptions
+                                 (Selenium/JavaScriptExecutor_Screenshot _Headless_IgnoreCertificates.py)
+
+--> How to Debug Code --> Break Point --> The point given on line of code upto which code will run automatically then after it will run when you click the 'Step Over' button
+                                      --> It is red colour point given by clicking exactly on the number of line
+                      --> Give the break point at line of code and click on the debug option on right top corner (insect symbol)
+                      --> After going to debugging, code will run upto break point on its own then by clicking 'Step Over' button it will go to next line
+                      --> In console, you can see what is going in that step
+
+
+--> HTML Locators --> XPath -- //tagname[@attribute='value'
+                  --> CSS Selector -- tagname[attribute='value']
+                  --> Class name -- .classname
+                  --> XPath for link -- //tagname[contains(@href, '<whole/some href link>')]
+                  --> CSS Selector for link -- tagname[href*='some href link'] -- By using * we can locate the element by using partial href link
+                  --> finf_element(By.CLASS_NAME, "<give single name>") -- when a class has multiple name then in selenium we can use single class name to automate it
+

@@ -1,0 +1,97 @@
+show databases;
+create database dassault1;
+drop database dassault1;
+use dassault;
+create table products(
+prodid int auto_increment,
+prodname varchar(30),
+location varchar(15),
+primary key(prodid));
+
+select * from products;
+
+insert into products (prodname,location) values
+("design2d","banglore"),
+("design3d","noida"),
+("catia","pune"),
+("renderer","mumbai");
+
+
+select * from products;
+alter table products add column projects int;
+describe products;
+select * from products;
+
+update products set projects = 3 where prodid = 1;
+update products set projects = 3 where projects is null;
+insert into products(projects) values (10),(3),(6),(7);
+select * from products;
+delete from products where prodid >4;
+select * from products;
+
+drop database hr;
+create database HR;
+drop table Employee;
+
+show databases;
+create table Employee(
+id int auto_increment,
+empname varchar(30),
+location varchar(15),
+brand varchar(15),
+primary key(id));
+
+insert into Employee (empname,location,brand) values
+("Sujit","solapur","Medidata"),
+("Akash","pune","Medidata"),
+("Aditya","pune","Medidata"),
+("Aaditya_pitke","bhopal","Medidata"),
+("Prachil","pune","Medidata");
+
+
+select * from Employee;
+drop table manager;
+create table Manager(
+Mgrid int auto_increment,
+mgrname varchar(30),
+brand varchar(30),
+location varchar(15),
+primary key(Mgrid));
+
+insert into Manager (mgrname,brand,location) values
+("Ankita","catia","banglore"),
+("rahul","solidworks","pune"),
+("Vishal","medidata","dubai"),
+("ganesh","Timepass","hinjewadi");
+
+select * from Manager;
+drop table it;
+create table IT(
+Itid int not null,
+Brandname varchar(30),
+systemes_allocation varchar(15),
+primary key(Itid));
+
+insert into IT (Itid,Brandname,systemes_allocation) values
+(8,"Medidata","Mac"),
+(9,"catia","Windows"),
+(10,"catia","Windows"),
+(11,"Medidata","Mac"),
+(12,"Medidata","Mac");
+
+select * from it2;
+show tables;
+
+create table IT2(
+Itid3 int not null,
+name2 varchar(30),
+itid int,
+primary key (itid3),
+foreign key(Itid) references it(Itid));
+
+insert into IT2 (Itid3,name2,itid) values
+-- (8,"Medidata",8),
+-- (9,"catia",9),
+-- (10,"catia",10),
+-- (11,"Medidata",11),
+(13,"Medidata",15);

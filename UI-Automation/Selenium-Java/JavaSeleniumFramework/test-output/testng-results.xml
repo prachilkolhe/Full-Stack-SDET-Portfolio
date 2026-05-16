@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-08T19:29:42 IST" name="Default suite" finished-at="2025-10-08T19:29:43 IST" duration-ms="327">
+    <groups>
+    </groups>
+    <test started-at="2025-10-08T19:29:42 IST" name="Default test" finished-at="2025-10-08T19:29:43 IST" duration-ms="327">
+      <class name="JavaSeleniumFramework.DataProviderANDExcelDataDriven">
+        <test-method signature="testCase(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaSeleniumFramework.DataProviderANDExcelDataDriven@38425407]" started-at="2025-10-08T19:29:43 IST" name="testCase" data-provider="driveTest" finished-at="2025-10-08T19:29:43 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[def]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ghi]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase -->
+        <test-method signature="testCase(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaSeleniumFramework.DataProviderANDExcelDataDriven@38425407]" started-at="2025-10-08T19:29:43 IST" name="testCase" data-provider="driveTest" finished-at="2025-10-08T19:29:43 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Purchase]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jkl]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[mno]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[pqr]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase -->
+        <test-method signature="testCase(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaSeleniumFramework.DataProviderANDExcelDataDriven@38425407]" started-at="2025-10-08T19:29:43 IST" name="testCase" data-provider="driveTest" finished-at="2025-10-08T19:29:43 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Add Profile]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[stu]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[vwx]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[yz]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase -->
+        <test-method signature="testCase(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaSeleniumFramework.DataProviderANDExcelDataDriven@38425407]" started-at="2025-10-08T19:29:43 IST" name="testCase" data-provider="driveTest" finished-at="2025-10-08T19:29:43 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delete Profile]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[456]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[789]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase -->
+      </class> <!-- JavaSeleniumFramework.DataProviderANDExcelDataDriven -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,25 @@
+package JavaSeleniumFramework;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+/*
+Window Authentication Pop Up :-
+dialogs controlled by the operating system, not the web page's HTML structure (DOM) (does not have HTML)
+Normal pop-ups are standard JavaScript dialogs that are explicitly triggered by code within the web page's JavaScript
+Pop up or the small window opening on the web page which have HTML code are called as Window Authentication pop up (https://the-internet.herokuapp.com/basic_auth)
+Resolution: Credentials must be embedded directly into the URL itself
+http://Username:Password@SiteURLtoHit
+*/
+
+public class AuthenticationPopUp {
+
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://admin:admin@the-internet.herokuapp.com/");       		// http://Username:Password@SiteURLtoHit
+		driver.findElement(By.linkText("Basic Auth")).click();
+
+	}
+
+}

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220822 16:03:55.413" rpa="false" schemaversion="3">
+<suite id="s1" name="Use Newtours Login" source="C:\Users\pkolhe\PycharmProjects\pythonProject\tests\use_newtours_login.robot">
+<test id="s1-t1" name="let's use template" line="18">
+<kw name="temp_google_search" library="newtours_res">
+<arg>Dassault</arg>
+<arg>Ramesh</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220822 16:03:55.542" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<status status="PASS" starttime="20220822 16:03:55.542" endtime="20220822 16:04:03.658"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:q</arg>
+<arg>${csearch}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 16:04:03.660" level="INFO">Typing text 'Dassault' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20220822 16:04:03.658" endtime="20220822 16:04:03.746"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220822 16:04:05.757" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220822 16:04:03.747" endtime="20220822 16:04:05.757"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name:q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220822 16:04:05.759" level="INFO">Sending key(s) ('ENTER',) to name:q element.</msg>
+<msg timestamp="20220822 16:04:26.628" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BD78B3+2193587]
+	Ordinal0 [0x00B70681+1771137]
+	Ordinal0 [0x00A84070+802928]
+	Ordinal0 [0x00A79AB2+760498]
+	Ordinal0 [0x00A6CEAF+708271]
+	Ordinal0 [0x00A71142+725314]
+	Ordinal0 [0x00A755C9+742857]
+	Ordinal0 [0x00A85500+808192]
+	Ordinal0 [0x00ADD2C2+1168066]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+	GetHandleVerifier [0x00C617AA+512954]
+	GetHandleVerifier [0x00C60856+509030]
+	Ordinal0 [0x00B7743B+1799227]
+	Ordinal0 [0x00B7BB68+1817448]
+	Ordinal0 [0x00B7BC55+1817685]
+	Ordinal0 [0x00B85230+1856048]
+	BaseThreadInitThunk [0x75A3FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x772B7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x772B7A6E+238]
+</msg>
+<msg timestamp="20220822 16:04:26.632" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BD78B3+2193587]
+	Ordinal0 [0x00B70681+1771137]
+	Ordinal0 [0x00A84070+802928]
+	Ordinal0 [0x00A79AB2+760498]
+	Ordinal0 [0x00A6CEAF+708271]
+	Ordinal0 [0x00A71142+725314]
+	Ordinal0 [0x00A755C9+742857]
+	Ordinal0 [0x00A85500+808192]
+	Ordinal0 [0x00ADD2C2+1168066]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+	GetHandleVerifier [0x00C617AA+512954]
+	GetHandleVerifier [0x00C60856+509030]
+	Ordinal0 [0x00B7743B+1799227]
+	Ordinal0 [0x00B7BB68+1817448]
+	Ordinal0 [0x00B7BC55+1817685]
+	Ordinal0 [0x00B85230+1856048]
+	BaseThreadInitThunk [0x75A3FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x772B7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x772B7A6E+238]
+</msg>
+<status status="FAIL" starttime="20220822 16:04:05.757" endtime="20220822 16:04:26.643"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220822 16:04:26.643" endtime="20220822 16:04:26.643"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${cname}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20220822 16:04:26.643" endtime="20220822 16:04:26.643"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20220822 16:04:26.643" endtime="20220822 16:04:26.643"/>
+</kw>
+<status status="FAIL" starttime="20220822 16:03:55.542" endtime="20220822 16:04:26.643"/>
+</kw>
+<kw name="temp_google_search" library="newtours_res">
+<arg>Pizza</arg>
+<arg>akash</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220822 16:04:26.644" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<msg timestamp="20220822 16:04:32.039" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BD78B3+2193587]
+	Ordinal0 [0x00B70681+1771137]
+	Ordinal0 [0x00A84070+802928]
+	Ordinal0 [0x00A79AB2+760498]
+	Ordinal0 [0x00A6CEAF+708271]
+	Ordinal0 [0x00A71142+725314]
+	Ordinal0 [0x00A755C9+742857]
+	Ordinal0 [0x00A85500+808192]
+	Ordinal0 [0x00ADD2C2+1168066]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+	GetHandleVerifier [0x00C617AA+512954]
+	GetHandleVerifier [0x00C60856+509030]
+	Ordinal0 [0x00B7743B+1799227]
+	Ordinal0 [0x00B7BB68+1817448]
+	Ordinal0 [0x00B7BC55+1817685]
+	Ordinal0 [0x00B85230+1856048]
+	BaseThreadInitThunk [0x75A3FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x772B7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x772B7A6E+238]
+</msg>
+<msg timestamp="20220822 16:04:32.044" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=104.0.5112.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BD78B3+2193587]
+	Ordinal0 [0x00B70681+1771137]
+	Ordinal0 [0x00A841A8+803240]
+	Ordinal0 [0x00A77E1E+753182]
+	Ordinal0 [0x00A77A0F+752143]
+	Ordinal0 [0x00A76FAF+749487]
+	Ordinal0 [0x00A75E94+745108]
+	Ordinal0 [0x00A76498+746648]
+	Ordinal0 [0x00A80610+787984]
+	Ordinal0 [0x00A7781D+751645]
+	Ordinal0 [0x00A78450+754768]
+	Ordinal0 [0x00A77A2A+752170]
+	Ordinal0 [0x00A76FAF+749487]
+	Ordinal0 [0x00A75E94+745108]
+	Ordinal0 [0x00A7636D+746349]
+	Ordinal0 [0x00A85974+809332]
+	Ordinal0 [0x00ADE18D+1171853]
+	Ordinal0 [0x00ACD7AC+1103788]
+	Ordinal0 [0x00ADDAE2+1170146]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+	GetHandleVerifier [0x00C617AA+512954]
+	GetHandleVerifier [0x00C60856+509030]
+	Ordinal0 [0x00B7743B+1799227]
+	Ordinal0 [0x00B7BB68+1817448]
+	Ordinal0 [0x00B7BC55+1817685]
+	Ordinal0 [0x00B85230+1856048]
+	BaseThreadInitThunk [0x75A3FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x772B7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x772B7A6E+238]
+</msg>
+<status status="FAIL" starttime="20220822 16:04:26.644" endtime="20220822 16:04:32.045"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:q</arg>
+<arg>${csearch}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220822 16:04:32.046" endtime="20220822 16:04:32.046"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220822 16:04:32.046" endtime="20220822 16:04:32.046"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name:q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20220822 16:04:32.046" endtime="20220822 16:04:32.046"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220822 16:04:32.046" endtime="20220822 16:04:32.046"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${cname}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20220822 16:04:32.046" endtime="20220822 16:04:32.046"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20220822 16:04:32.046" endtime="20220822 16:04:32.046"/>
+</kw>
+<status status="FAIL" starttime="20220822 16:04:26.644" endtime="20220822 16:04:32.047"/>
+</kw>
+<kw name="temp_google_search" library="newtours_res">
+<arg>Chopda</arg>
+<arg>Prachil</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220822 16:04:32.047" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<status status="PASS" starttime="20220822 16:04:32.047" endtime="20220822 16:04:40.539"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:q</arg>
+<arg>${csearch}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220822 16:04:40.540" level="INFO">Typing text 'Chopda' into text field 'name:q'.</msg>
+<status status="PASS" starttime="20220822 16:04:40.540" endtime="20220822 16:04:40.621"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220822 16:04:42.626" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220822 16:04:40.623" endtime="20220822 16:04:42.626"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name:q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220822 16:04:42.628" level="INFO">Sending key(s) ('ENTER',) to name:q element.</msg>
+<msg timestamp="20220822 16:05:03.576" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BD78B3+2193587]
+	Ordinal0 [0x00B70681+1771137]
+	Ordinal0 [0x00A84070+802928]
+	Ordinal0 [0x00A79AB2+760498]
+	Ordinal0 [0x00A6CEAF+708271]
+	Ordinal0 [0x00A71142+725314]
+	Ordinal0 [0x00A755C9+742857]
+	Ordinal0 [0x00A85500+808192]
+	Ordinal0 [0x00ADD2C2+1168066]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+	GetHandleVerifier [0x00C617AA+512954]
+	GetHandleVerifier [0x00C60856+509030]
+	Ordinal0 [0x00B7743B+1799227]
+	Ordinal0 [0x00B7BB68+1817448]
+	Ordinal0 [0x00B7BC55+1817685]
+	Ordinal0 [0x00B85230+1856048]
+	BaseThreadInitThunk [0x75A3FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x772B7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x772B7A6E+238]
+</msg>
+<msg timestamp="20220822 16:05:03.580" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BD78B3+2193587]
+	Ordinal0 [0x00B70681+1771137]
+	Ordinal0 [0x00A84070+802928]
+	Ordinal0 [0x00A79AB2+760498]
+	Ordinal0 [0x00A6CEAF+708271]
+	Ordinal0 [0x00A71142+725314]
+	Ordinal0 [0x00A755C9+742857]
+	Ordinal0 [0x00A85500+808192]
+	Ordinal0 [0x00ADD2C2+1168066]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+	GetHandleVerifier [0x00C617AA+512954]
+	GetHandleVerifier [0x00C60856+509030]
+	Ordinal0 [0x00B7743B+1799227]
+	Ordinal0 [0x00B7BB68+1817448]
+	Ordinal0 [0x00B7BC55+1817685]
+	Ordinal0 [0x00B85230+1856048]
+	BaseThreadInitThunk [0x75A3FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x772B7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x772B7A6E+238]
+</msg>
+<status status="FAIL" starttime="20220822 16:04:42.627" endtime="20220822 16:05:03.580"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220822 16:05:03.580" endtime="20220822 16:05:03.580"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${cname}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20220822 16:05:03.580" endtime="20220822 16:05:03.580"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20220822 16:05:03.580" endtime="20220822 16:05:03.580"/>
+</kw>
+<status status="FAIL" starttime="20220822 16:04:32.047" endtime="20220822 16:05:03.581"/>
+</kw>
+<tag>Hawa</tag>
+<tag>Medidata_Brand</tag>
+<status status="FAIL" starttime="20220822 16:03:55.542" endtime="20220822 16:05:03.581">Several failures occurred:
+
+1) WebDriverException: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BD78B3+2193587]
+	Ordinal0 [0x00B70681+1771137]
+	Ordinal0 [0x00A84070+802928]
+	Ordinal0 [0x00A79AB2+760498]
+	Ordinal0 [0x00A6CEAF+708271]
+	Ordinal0 [0x00A71142+725314]
+	Ordinal0 [0x00A755C9+742857]
+	Ordinal0 [0x00A85500+808192]
+	Ordinal0 [0x00ADD2C2+1168066]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+    [ Message content over the limit has been removed. ]
+	Ordinal0 [0x00A79AB2+760498]
+	Ordinal0 [0x00A6CEAF+708271]
+	Ordinal0 [0x00A71142+725314]
+	Ordinal0 [0x00A755C9+742857]
+	Ordinal0 [0x00A85500+808192]
+	Ordinal0 [0x00ADD2C2+1168066]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+	GetHandleVerifier [0x00C617AA+512954]
+	GetHandleVerifier [0x00C60856+509030]
+	Ordinal0 [0x00B7743B+1799227]
+	Ordinal0 [0x00B7BB68+1817448]
+	Ordinal0 [0x00B7BC55+1817685]
+	Ordinal0 [0x00B85230+1856048]
+	BaseThreadInitThunk [0x75A3FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x772B7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x772B7A6E+238]</status>
+</test>
+<status status="FAIL" starttime="20220822 16:03:55.414" endtime="20220822 16:05:03.583"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Hawa</stat>
+<stat pass="0" fail="1" skip="0">Medidata_Brand</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Use Newtours Login">Use Newtours Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220822 16:04:26.628" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BD78B3+2193587]
+	Ordinal0 [0x00B70681+1771137]
+	Ordinal0 [0x00A84070+802928]
+	Ordinal0 [0x00A79AB2+760498]
+	Ordinal0 [0x00A6CEAF+708271]
+	Ordinal0 [0x00A71142+725314]
+	Ordinal0 [0x00A755C9+742857]
+	Ordinal0 [0x00A85500+808192]
+	Ordinal0 [0x00ADD2C2+1168066]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+	GetHandleVerifier [0x00C617AA+512954]
+	GetHandleVerifier [0x00C60856+509030]
+	Ordinal0 [0x00B7743B+1799227]
+	Ordinal0 [0x00B7BB68+1817448]
+	Ordinal0 [0x00B7BC55+1817685]
+	Ordinal0 [0x00B85230+1856048]
+	BaseThreadInitThunk [0x75A3FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x772B7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x772B7A6E+238]
+</msg>
+<msg timestamp="20220822 16:04:32.039" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BD78B3+2193587]
+	Ordinal0 [0x00B70681+1771137]
+	Ordinal0 [0x00A84070+802928]
+	Ordinal0 [0x00A79AB2+760498]
+	Ordinal0 [0x00A6CEAF+708271]
+	Ordinal0 [0x00A71142+725314]
+	Ordinal0 [0x00A755C9+742857]
+	Ordinal0 [0x00A85500+808192]
+	Ordinal0 [0x00ADD2C2+1168066]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+	GetHandleVerifier [0x00C617AA+512954]
+	GetHandleVerifier [0x00C60856+509030]
+	Ordinal0 [0x00B7743B+1799227]
+	Ordinal0 [0x00B7BB68+1817448]
+	Ordinal0 [0x00B7BC55+1817685]
+	Ordinal0 [0x00B85230+1856048]
+	BaseThreadInitThunk [0x75A3FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x772B7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x772B7A6E+238]
+</msg>
+<msg timestamp="20220822 16:05:03.576" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=104.0.5112.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00BD78B3+2193587]
+	Ordinal0 [0x00B70681+1771137]
+	Ordinal0 [0x00A84070+802928]
+	Ordinal0 [0x00A79AB2+760498]
+	Ordinal0 [0x00A6CEAF+708271]
+	Ordinal0 [0x00A71142+725314]
+	Ordinal0 [0x00A755C9+742857]
+	Ordinal0 [0x00A85500+808192]
+	Ordinal0 [0x00ADD2C2+1168066]
+	Ordinal0 [0x00ACD5C6+1103302]
+	Ordinal0 [0x00AA77E0+948192]
+	Ordinal0 [0x00AA86E6+952038]
+	GetHandleVerifier [0x00E80CB2+2738370]
+	GetHandleVerifier [0x00E721B8+2678216]
+	GetHandleVerifier [0x00C617AA+512954]
+	GetHandleVerifier [0x00C60856+509030]
+	Ordinal0 [0x00B7743B+1799227]
+	Ordinal0 [0x00B7BB68+1817448]
+	Ordinal0 [0x00B7BC55+1817685]
+	Ordinal0 [0x00B85230+1856048]
+	BaseThreadInitThunk [0x75A3FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x772B7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x772B7A6E+238]
+</msg>
+</errors>
+</robot>

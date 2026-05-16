@@ -1,0 +1,10 @@
+--> To fetch the data from excel sheet in Java test case, 'Apache POI' and 'Apache POI ooxml' API dependencies are used in pom.xml file
+--> Also, we use the XSSFWorkbook class method, so at first we need to create object of this class then we can access the methods of that class
+--> XSSFWorkbook this class needs a file path as an argument in the format of FileInputStream (It is class of the JAVA which is able to read the excel data using file path)
+--> File extension should be .xlsx
+
+
+********** TestNG Data Provider + Excel Data Provider Integration **********
+--> When we use data provider in TestNG, its kind of hard coding the data in workspace
+--> So to iliminate the hard coding of the data, we can use excel sheet of data
+

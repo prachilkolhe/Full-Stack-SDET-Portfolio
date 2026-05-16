@@ -1,0 +1,78 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 77,
+    "name": "White House",
+    "phone_number": "0987654321",
+    "address": "Street Number 2, Spain",
+    "types": [
+        "Dadar Park",
+        "Shivaji Park"
+    ],
+    "website": "www.testingdemo.com",
+    "language": "Spanish",
+    "location": {
+        "latitude": -38.555555,
+        "longitude": 33.444444
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 19 Dec 2025 19:14:15 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 0
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json; charset=UTF-8
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accuracy": 77,
+    "name": "Black House",
+    "phone_number": "0987654321",
+    "address": "Lahore, Pakistan",
+    "types": [
+        "Dadar Park",
+        "Shivaji Park"
+    ],
+    "website": "www.testingdemo.com",
+    "language": "Urdu",
+    "location": {
+        "latitude": -38.555555,
+        "longitude": 33.444444
+    }
+}
+HTTP/1.1 200 OK
+Date: Fri, 19 Dec 2025 19:14:15 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 0
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json; charset=UTF-8

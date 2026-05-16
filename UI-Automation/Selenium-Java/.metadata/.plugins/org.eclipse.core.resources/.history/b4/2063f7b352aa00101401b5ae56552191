@@ -1,0 +1,10 @@
+
+public interface JavaOOPSInterfaces {
+	
+	public void redSignal();
+	
+	public void greenSignal();
+	
+	public void yellowSignal();
+
+}

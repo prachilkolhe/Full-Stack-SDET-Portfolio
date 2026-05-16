@@ -1,0 +1,146 @@
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
+public class JavaOOPSArrays {
+
+	public static void main(String[] args) {
+		
+		// Array --> A container which store multiple value of same data types
+		// Declaring an array 'a' of 'int' data type which has memory of 5 integer numbers
+		// Array or ArrayList accepts duplicate values
+		// In array we can save any value at any index
+		
+		int a[] = new int[5];
+		
+		// Value assignment using index
+		a[0] = 10;
+		a[1] = 20;
+		a[2] = 30;
+		a[3] = 40;
+		a[4] = 50;
+		
+		for (int i=0; i<a.length; i++) {
+			System.out.println(a[i]);
+		}
+		
+		
+		// Another way of declaring an array without allocating the memory using 'new'
+		int b[] = {1,2,3,4,5};
+		for (int i=0; i<b.length; i++) {
+			System.out.println(b[i]);
+		}
+		
+		
+		// Multi-Dimensional Array
+		// Declaring a multi dimensional array with 'int' data type and 2 rows and 3 columns
+		int c[][] = new int[2][3];
+		c[0][0] = 1;
+		c[0][1] = 2;
+		c[0][2] = 3;
+		c[1][0] = 4;
+		c[1][1] = 5;
+		c[1][2] = 6;
+		
+		// To print the value of array present at second row and first column
+		System.out.println(c[1][0]);
+		
+		// Another way to declare multi dimensional array
+		int d[][] = {{11, 22, 33}, {44, 55, 66}, {77, 88, 99}};
+		System.out.println(d[2][1]);
+		
+		for (int x=0; x<3; x++) {
+			for (int y=0; y<3; y++) {
+				System.out.println(d[x][y]);
+			}
+		}
+		
+		
+		// Print smallest number from 3x3 matrix and maximum number of that column
+		int array[][] = {{2,4,5},{3,7,9},{2,8,1}};
+		int min=array[0][0];
+		int minColumnIndex=0;
+		for (int p=0; p<3; p++) {
+			for (int q=0; q<3; q++) {
+				if (array[p][q] < min) {
+					min = array[p][q];
+					minColumnIndex = q;
+					System.out.println("Smalled Number column index is: " + minColumnIndex);
+				}
+			}
+		}
+		
+		int max=array[0][minColumnIndex];
+		int k=0;
+		while (k<3){
+			if (array[k][minColumnIndex]> max) {
+				max = array[k][minColumnIndex];
+			}
+			k++;
+		}
+		
+		System.out.println("Smallest Number of the 3x3 matrix is: " + min);
+		System.out.println("Largest Number is: " + max);
+		
+		
+		
+/* **************************************************************************************************************************************** */		
+		
+		//Sets :-
+		// Sets is a collection which does not stores the duplicate values, it just ignore duplicate value instead of raising an error
+		// Not sure that values will stored in sequential manner, so can't use index here
+		// Types: HashSet, TreesSet, LinkedHashSet
+		
+		HashSet<String> hs = new HashSet<String>();
+		hs.add("Prachil");
+		hs.add("Kolhe");
+		hs.add("Prachil");
+		hs.add("Chopda");
+		System.out.println(hs);
+		hs.remove("Chopda");
+		System.out.println(hs);
+		System.out.println(hs.size());
+		hs.add("Jalgoan");
+		hs.add("India");
+		hs.add("UK");
+		System.out.println(hs);
+		
+		Iterator<String> value = hs.iterator();
+		while (value.hasNext()) {
+		System.out.println(value.next());
+		}
+		
+		
+		
+		
+/* **************************************************************************************************************************************** */
+		// HashMap :-
+		// Stores the value in Key:Value pattern
+		// No role of index, depends on key and value
+		
+		HashMap<Integer, String> hm = new HashMap<Integer, String>();
+		hm.put(0, "Hello");
+		hm.put(1, "World");
+		hm.put(2, "India");
+		hm.put(3, "Good Morning");
+		System.out.println(hm);
+		System.out.println(hm.get(2));
+		System.out.println(hm.get(10));			// No key found so o/p will be Null
+		hm.remove(1);
+		System.out.println(hm);
+		System.out.println(hm.get(1));
+		
+		Set set = hm.entrySet();
+		Iterator it = set.iterator();
+		while (it.hasNext()) {
+			Map.Entry mp = (Map.Entry)it.next();			// To print the key and value separately, we use Map.Entry function
+			System.out.println(mp.getKey());
+			System.out.println(mp.getValue());
+		}
+		
+	}
+}

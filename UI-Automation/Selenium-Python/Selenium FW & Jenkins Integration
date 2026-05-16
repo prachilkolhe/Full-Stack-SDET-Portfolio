@@ -1,0 +1,17 @@
+--> Jenkins is the open source Continuous Integration (CI) server
+--> Server is http://localhost:8080 or http://localhost:9090
+--> Download Generic Java Package (.war) file and install using command 'java -jar jenkins.war'
+--> Once Jenkins is running, you can access it local host
+
+*** Integration with Selenium FW ***
+--> Create a new project folder for selenium FW, in that folder give our local path of selenium directory
+--> Give command to run the testt by going in required folders, here you can use environment variables to shorten our commands
+--> In commands, you can also give command for generating html report with folder path
+--> Save the project
+--> Go to that project folder, click 'Build Now' it will start execution
+--> We can configure Jenkins with choice parameterized while running for eg. In which browser test should be run
+
+--> To create xml report of test results, how many test passed or failed
+    --> So first need to export all the test results as XML file, run with command '-v --junitxml=result.xml'
+    --> In Configuration --> Add Post Build Option --> Publish JUnit test result report --> Give the path of exported result.xml file --> Save the project
+    --> Now start the build --> When build is completed a 'latest Test Result' report will be created there --> Open and see how many test cases were failed or passed or skip

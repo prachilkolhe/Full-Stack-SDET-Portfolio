@@ -1,0 +1,152 @@
+** API --> Application Programming Interface
+
+
+			—>         HTTP Request 	   —> 
+Frontend										Backend 	—> 		Database
+(Client)									    (Server)			(Stores data)
+			<— 	   HTTP Response (JSON)    <— 
+
+
+** REST  —> Architectural design to create an API
+	  —> Kind of rulebook while creating an API
+	  —> Flexible than SOAP
+
+
+** Endpoint/ Base URI —> Address where actual API is hosted on the server
+
+
+** HTTP methods which are commonly used to communicate with REST APIs are => GET POST PUT and DELETE
+GET => Used to extract the information from the given server using given URI. While using the GET request, it should only extract data from the server, it should not make any affect on the data. No Payload/Body is required
+	=> How to send input data in GET —> Using Query Parameters
+
+
+POST => Used to send the data to server using HMTL formats. For example, File Upload, Send Person Information
+	 => How to send input data in POST —> Using Form Parameters/ Body Payload
+
+
+PUT => Replaces the current representations of the target resource with the uploaded content
+
+
+DELETE => Removes all the current representations of the target resource given by URI
+
+
+** Resources --> Resource represents API/Collections which can be accessed from the server.
+			google.com/maps
+			google.com/search
+			google.com/images
+			From above examples, google.com is the base URI/Endpoint where maps, search and images API are hosted and those we called as Resources of google.com server
+
+
+** Parameters --> Two types —-> Path parameters
+						   --> Query parameters 
+						   
+	Path Parameters => These are the variable parts of the URI path. They are typically used to point to a specific resource within a Collection. Such as user identified by ID
+					https://www.google.com/images/mangoes
+					google.com —> Endpoint/ Base URI
+					Images —> Collection API
+					Mangoes —> Path parameter —> Specifically to search the mangoes using images API
+	
+	Query Parameters => It is used to sort/ filter the resources
+					 => Query parameters are identified by ‘?’
+					    https://amazon.com/orders?sort_by=02/02/2025
+						amazon.com —> API Endpoint 
+						orders —> Resources
+						sort_by —> Query parameters (identified by ? => ?query parameter name= value)
+					 => For multiple query parameters —> All parameters should be separated by & and first parameters should be starts with ?
+
+** API Format --> Base URI/resource/(?query/path)parameters
+
+
+** Headers/ Cookies --> Headers represents the meta data associated with API request and response. Like we are sending exta details to API to process our request
+				   --> Example: Authorization details
+
+
+** REST Assured --> REST Assured is s Java based library used to test the Restful APIs/ Services
+			   --> REST Assured works on the 3 keywords = Given, When, Then
+				   Given= All input details
+				   When= Submit API request
+				   Then= Validate the response
+
+** SessionFilter() --> In Rest Assured, SessionFilter class is a powerful utility used to manage cookie-based authentication across multiple API requests.
+				  --> It captures the session ID (cookies) generated during a login request and automatically applies that session ID to subsequent requests, ensuring the server recognizes you as a logged-in user
+
+** MultiPart() --> This is primarily used for uploading files, but it is also used for sending requests that contain a mix of files and text/JSON data.
+
+
+** OAuth 2.0 --> OAuth 2.0 is an authorization framework that allows a third-party application to access a user's resources on another service without sharing their password.
+			--> It works by issuing temporary access tokens to the application, which the user can grant or revoke access to.
+			--> OAuth 2.o comes with multiple grant types, commonly used are => Authorization Code and Client Credentials.
+			--> In authorization_code grant type => Its necessary to have authorization token to hit required APi to get response
+			--> In Client Creadentyials grant type => There is no need of authorize the user (In authorization grant type there is one additinal layer to authorize user)
+
+** Serialization --> In RestAssured context, it is a process of converting a JAVA object into Request body (Payload)
+** Deserialization --> It is a process of extracting request body (Payload) into JAVA object
+** POJO Classes --> Plain Old Java Object
+				--> In POJO Class, we have to create class first
+					--> Inside class, create a variable which we are going to use in Request body (Payload)
+					--> Create getters and setters method for each variable created in class (Shortcut key => cmd + opt + s)
+					--> In get method, return that variable
+					--> In Set method, Give the variable created in class as arg for this Set method and assign that variable to the variable we used in request body using this. keyword
+					--> Then create a object of this class to access method present in this class
+					--> Use Set method using object of class to pass the actual value you want to pass
+					--> Advantage => Easy to access or extract response value if they are wrapped as Java object
+								  => To make code more readable
+					--> In serialization, we use Set method to set value to variable and used in request
+					--> In Deserialization, we use Get method to extract the value of variable from generated response
+
+** Spec Builders --> It is class which can be used for the repititive code which is used for every test case
+				 --> It is used to make code cleaner and more generic
+				 --> Spec Builder file can be created for both request (RequestSpecBuilder) and response (ResponseSpecBuilder)
+				 --> Return type is always RequestSpecification
+				 --> Add .build() method at the end of Spec Builder
+				 --> To call that specf builder in test case, use .spec() at given() or then() method and pass the object created for that spec builder
+				 --> For RequestSpecBuilder we use set keyword to set the value --> Return type will be RequestSpecification
+				 --> For ResponseSpecBuilder we use expect keyword to verify --> Return type will be ResponseSpecification
+				 
+
+** Cucumber Framework --> .feature file is feature file where we add steps in Gherkin syntax
+					  --> For step definition, we create a java class where we define all step definitions along with Given When Then keywords
+					  --> To run the scenario in feature file, we have to create test runner file, ie, .java class
+					  		--> In test runner file, we need to create a tag @CucumberOptions in which we will pass the file path of step definition and feature files which to be part of this test runner file to run
+					  		--> In CucumberOption tag we pass feature files patg using 'features' tag
+					  		--> In CucumberOption tag we pass step definition file path using 'glue' tag
+					  		--> We add tag @RunWith(Cucumber.class) to run the test runner file
+					  		--> We don't code anything inside the class of test runner file
+					  --> Hack => To create the step defination for all steps mentioned in feature file
+					  		--> First create feature file and test runner and pass step definition and feature files path
+					  		--> Run the test runner file it will list out steps with its defination in console just copy and paste in step definition file
+					  		
+					  --> When any test scenario does not have any data mentioned in Examples: the that scenario should have Scenario
+					  --> When any test scenario is having any data mentioned in Examples: the that scenario should have Scenario Outline
+					  --> We can run scenario using tags, give tag to scenario using @ and pass that tag as string in runner file in CucumberOptions with key tags
+
+
+** enum Class --> enum is special class which has collections of methods or constants
+			  --> To declare method, we just need to give name and arg, no need to add static void keywords
+			  --> For enum we need to create constructor just with same name of class name and pass same datatype of arg we are passing to methods
+			  
+			  
+** Hooks in Cucumber --> If test scenario B is dependent of data generated in test scenario A, then without executing scenario a we can generate data for scenario B by using hooks
+					 --> Hooks are just like annotations, @Before(<estScenarioTag>) or @After(<estScenarioTag>), pass the scenario tag before or after which we need to execute this
+					 --> Hooks are simply the java class which has methods to perform required opearations. 
+					 --> In hooks methods with proper tags we can  existing methods are test scenarios as well.
+
+
+** HTML Report --> To generate the HTML report for the cucumber scenario execution, we need to add the build of 'maven-cucumber-reporting' from github in pom.xml file
+			   --> Mentioned the version in build attribute
+			   --> In test runner file, add attribute of plugin which will create a JSON format file at given path which will be taken as input to generate HTML report
+			   --> Run the command 'mvn test verify'
+
+
+** Jenkins Integration --> Download the .war file for the Jenkins
+					   --> In terminal enter command to run the Jenkins on local host => java -jar <downloaded_war_file_name_with_extension> -httpPort=9090 => This will run the Jenkins on localhost:9090
+					   --> Go to the localhost:9090, for the first time we need to create a account there to create project/job, if account created just login in with username and password
+					   --> While creating job in Jenkins, we just add the command as Build Path which we used to run the test cases ==> Jenkins will use the same given command to run the job
+					   --> User parametrization, we can add list of tags there, and pass that variable to command using $ => and then we need to select the variable value in Build with Parameter section and click build
+					   	   => so when we run the job that selected value will stored in command and that scenario will run
+					   
+					 
+					
+
+
+

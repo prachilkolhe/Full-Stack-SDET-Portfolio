@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name="My Test Suite">
+  <!-- Suite Level Parameterization => Valid for all the test folders of this suite -->
+  <parameter name="SuiteParameter1" value="Suite Level Parameter">
+  </parameter>
+  
+  <test thread-count="5" name="Introduction">
+  <!-- Test Folder Level Parameterization => Valid only for all the test class methods of this test folder -->
+	  <parameter name="TestParameter1" value="Test Level Parameter - Login Credentials">
+	  </parameter>
+	  <parameter name="TestParameter2" value="Test Level Parameter - Login API key">
+	  </parameter>
+  
+    <classes>
+      <class name="TestNGPackage.IntroductionTestNG"/>  <!-- Class name should be followed by its parent package name -->
+	  <class name="TestNGPackage.Day1"/>
+	  <class name="TestNGPackage.Day2"/>
+	  <class name="TestNGPackage.Day3"/>
+    </classes>
+    
+    </test>
+</suite>
+
+<!--
+	Parameter which we are inject here in .xml file will be use while test method execution
+	Two ways => Suite Level Parameterization and Test Folder Level Parameterization
+	Suite Level Parameterization => Can be used for all test methods of the test folders present in that suite
+	Test Folder Level Parameterization => Can be used only for all test methods of that test folder
+	These parameters will be use in .java test method file using @Parameter()
+-->

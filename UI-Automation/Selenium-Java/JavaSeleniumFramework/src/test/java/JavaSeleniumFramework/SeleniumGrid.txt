@@ -1,0 +1,47 @@
+********* SELENIUM GRID *********
+--> It is smart proxy server that makes it easy to run the tests in parallel on multiple machines
+
+--> 1. Distributed Node --> Every components needs to be start on its own
+	2. Hub and Nodes 
+		=> Hub
+			  --> Hub is union of Router, Distributer, Session Map, New Session Queue, Event Bus
+			  --> All these will be started by single command only
+			  --> Need to download Selenium Server .jar file and all browser driver files and put all of them in same folder along with jar file
+			  --> To start that jar file run command as a hub, run command => 'java -jar <jarfilename.jar> hub' (This will run the jar file as a hub)
+		=> Nodes
+			  --> Start the node in same machine => 'java -jar <jarfilename.jar> node --detect-drivers true'
+			  --> Start the node in another physical machine => 'java -jar <jarfilename.jar> node --detect-drivers true --publish-events tcp://<ipaddressofhub> --subscribe-events tcp://<ipaddressofhub>'
+			  
+		=> To check the status of hub and node --> Go to the http://localhost:4444/ (or go to the localhost url which is displaying in terminal)
+		
+		
+			
+			
+--> In Selenium test, instead of passing chromedrivber we need to pass RemoteWebDriver with URL and capabilites arguments
+
+	  @Test
+	  public void getGooglePage() throws MalformedURLException, URISyntaxException 
+	  {
+	  DesiredCapabilities caps = new DesiredCapabilities();				--> using this class, we are configuring the capabilties of the driver
+	  caps.setBrowserName("Chrome");          							--> On which browser you want run the test cases
+	  caps.setPlatform(Platform.WIN10);									--> On which OS you want run the test cases
+	  
+	  WebDriver driver = new RemoteWebDriver(new URI("<localhostURL>").toURL(), caps);
+	  driver.get("http://google.com");
+	  }
+	  
+	  
+	  
+--> Create one testNG file of all the test classes which you want to run parallaly and not to forget the parallel property and classes as its value
+--> Run the testNG file
+
+
+
+************** CDP **************
+--> Chrome Dev Tools --> It is a set of web developer tools built directly into Chrome browser (Inspect page)
+--> Chrome Dev Protocol (CDP) --> It is a set of instruction given to chrome dev tools to instrument, debug, inspect (Tabs present after inspecting the page)
+--> 'Chromiun Driver' class has prededfined methods to access dev tools
+--> Chromedriver and Edgedriver are inherited from Chromiun Driver, So we can access dev tools only in Chrome and Edge browsers
+
+
+

@@ -1,0 +1,23 @@
+
+/* Interface (What to do) and Class (How to do)
+ * Interface has a method but does not have any body in that method
+ * Classes also has a method and body within that
+ * Example:- WebDriver driver = new ChromeDriver();
+   The WebDriver interface defines the contract (.get(), .click(), .findElement())
+   The ChromeDriver class provides the specific implementation for that browser
+*/
+
+
+public interface JavaOOPSInterfaces {
+	
+	public void redSignal();
+	
+	public void greenSignal();
+	
+	public void yellowSignal();
+
+}
+
+/* Here in this interface, it will have only methods without body of execution
+   When any class implements this interface then that class has to add all methods and put their code of execution in each method
+*/

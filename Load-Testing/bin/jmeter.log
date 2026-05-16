@@ -1,0 +1,26 @@
+2025-07-13 11:13:43,314 INFO o.a.j.u.JMeterUtils: Setting Locale to en_GB
+2025-07-13 11:13:43,365 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2025-07-13 11:13:43,366 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2025-07-13 11:13:43,374 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-07-13 11:13:43,375 INFO o.a.j.JMeter: Version 5.6.3
+2025-07-13 11:13:43,375 INFO o.a.j.JMeter: java.version=23.0.1
+2025-07-13 11:13:43,375 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-07-13 11:13:43,375 INFO o.a.j.JMeter: os.name=Mac OS X
+2025-07-13 11:13:43,375 INFO o.a.j.JMeter: os.arch=x86_64
+2025-07-13 11:13:43,375 INFO o.a.j.JMeter: os.version=15.5
+2025-07-13 11:13:43,375 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-07-13 11:13:43,375 INFO o.a.j.JMeter: java.awt.headless=null
+2025-07-13 11:13:43,375 INFO o.a.j.JMeter: Max memory     =4294967296
+2025-07-13 11:13:43,375 INFO o.a.j.JMeter: Available Processors =8
+2025-07-13 11:13:43,396 INFO o.a.j.JMeter: Default Locale=English (United Kingdom)
+2025-07-13 11:13:43,397 INFO o.a.j.JMeter: JMeter  Locale=English (United Kingdom)
+2025-07-13 11:13:43,397 INFO o.a.j.JMeter: JMeterHome=/Users/pkolhe/apache-jmeter-5.6.3
+2025-07-13 11:13:43,397 INFO o.a.j.JMeter: user.dir  =/Users/pkolhe/apache-jmeter-5.6.3/bin
+2025-07-13 11:13:43,397 INFO o.a.j.JMeter: PWD       =/Users/pkolhe/apache-jmeter-5.6.3/bin
+2025-07-13 11:13:43,400 INFO o.a.j.JMeter: IP: 10.86.253.186 Name: C02G59R4ML7H FullName: 10.86.253.186
+2025-07-13 11:13:43,424 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2025-07-13 11:13:45,913 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2025-07-13 11:13:49,788 INFO o.a.j.r.ClassFinder: Will scan jar /Users/pkolhe/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-13 11:13:50,016 INFO o.a.j.r.ClassFinder: Will scan jar /Users/pkolhe/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-casutg-3.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-13 11:13:50,189 INFO o.a.j.r.ClassFinder: Will scan jar /Users/pkolhe/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-07-13 11:13:50,192 INFO o.a.j.r.ClassFinder: Will scan jar /Users/pkolhe/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-casutg-3.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning

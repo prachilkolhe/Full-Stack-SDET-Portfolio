@@ -1,0 +1,42 @@
+**** How to Run Tests in the Framework from Terminal Using Maven Commands ****
+--> Need to install maven in system, while running in eclipse its automatically installed and set env var for that
+--> Need to add Maven TestNG plugin (Surefire) in pom.xml file (https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html)
+	--> Add <plugin> in pom.xml file
+	--> Create <profile> for testNG file
+	--> Command to run = mvn test -P<id>
+	
+	
+	
+**** Jenkins Integration ****
+--> First need to install jenkins in local machine
+--> Use command to run local host on machine using jenkins
+--> Need to create user id password for that browser url
+--> Create one separate folder, set local directory path and build and give commands to run and save it
+--> Start the build
+--> To make the build in parameterised, go to Configure and select the checkbox 'This Project is parameterised' and give Name and choice and save it
+--> Now add that parameter in your build command and call the variable using "$var_name" (treated as Jenkins variable)
+--> Now run build using the paramter and with your choice
+--> We can run build in periodic mode by checking checkbox 'Build Periodically' and set the time using 5 parameters format
+	(mm hh date month weekdays)
+	
+
+**** Cucumber ****
+--> BDD based test automation framework
+--> Gherkin is a plain-language syntax used to describe a behvaiour of the application
+	--> Keywords => Feature, Scenario, Scenario Outline, Given, When, Then, And, But, Background, Examples, Tags(@) (Example:- Given I am on the login page)
+	
+--> Cucumber is a software tool that understands and executes Gherkin syntax
+	--> Tool which finds the corresponding code to execute (called step definitions file), and runs it
+	
+--> Without Gherkin, Cucumber has nothing to run. Without Cucumber, Gherkin is just a text file
+--> Cucumber provides the Gherkin language for behavior descriptions, and Capybara provides the Ruby code for the step definitions
+	--> Gherkin describes the test in plain English
+	--> Cucumber reads the Gherkin and matches it to a step definition
+	--> Capybara provides the easy-to-read methods within the step definition to interact with the web page
+	--> Selenium is the driver that Capybara uses to control the browser
+
+--> Need to add two dependencies => Cucumber JAVA and Cucumber TestNG
+--> Needs to install 'Cucumber Eclipse Plugin' in Help - Eclipse Marketplace
+
+
+

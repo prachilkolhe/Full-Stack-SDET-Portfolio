@@ -1,0 +1,18 @@
+2024-07-27 11:43:01,149 :INFO :PyTest.test_logging :Informative message will print here
+2024-07-27 11:43:01,149 :WARNING :PyTest.test_logging :Warning message will print here
+2024-07-27 11:43:01,149 :ERROR :PyTest.test_logging :Error message will print here
+2024-07-27 11:43:01,150 :CRITICAL :PyTest.test_logging :Critical message will print here
+2024-07-27 12:08:48,881 :INFO :PyTest.test_log_instead_prints :Rahul
+2024-07-27 12:08:48,881 :INFO :PyTest.test_log_instead_prints :Rahul
+2024-07-27 12:08:48,882 :INFO :PyTest.test_log_instead_prints :rahulshettyacademy.com
+2024-07-27 12:08:48,882 :INFO :PyTest.test_log_instead_prints :rahulshettyacademy.com
+2024-07-27 12:14:06,707 :INFO :test_load_logindata :Rahul
+2024-07-27 12:14:06,707 :INFO :test_load_logindata :rahulshettyacademy.com
+2024-07-27 12:31:25,751 :INFO :PyTest.test_log_instead_prints :Rahul
+2024-07-27 12:31:25,751 :INFO :PyTest.test_log_instead_prints :Rahul
+2024-07-27 12:31:25,752 :INFO :PyTest.test_log_instead_prints :rahulshettyacademy.com
+2024-07-27 12:31:25,752 :INFO :PyTest.test_log_instead_prints :rahulshettyacademy.com
+2024-07-27 12:31:25,761 :INFO :PyTest.test_logging :Informative message will print here
+2024-07-27 12:31:25,761 :WARNING :PyTest.test_logging :Warning message will print here
+2024-07-27 12:31:25,761 :ERROR :PyTest.test_logging :Error message will print here
+2024-07-27 12:31:25,761 :CRITICAL :PyTest.test_logging :Critical message will print here

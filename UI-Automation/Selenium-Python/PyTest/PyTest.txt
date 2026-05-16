@@ -1,0 +1,85 @@
+--> Pytest is the testing framework for Python
+--> To run individual file in terminal --> pytest -v -s <file_name>
+--> I have installed pytest in myenv virtual env --> How to create virtual env --> run commands -- python3 -m venv myenv
+                                                                                                                               -- source myenv/bin/activate
+                                                                                                                               -- deactivate --> to deactivate it
+    --> To activate it use command 'source myenv/bin/activate'
+    --> Then go to path of pytest folder and run command
+    --> To deactivate it use command 'deactivate'
+--> Any pytest file's name should be start with 'test_'
+
+--> In Pytest, every code of line should be written in a function -- That function we called in pytest as 'Pytest Method' -- And every
+    pytest method name should start with test_
+    --> In pytest, no two test methods should have sam name, if present then latest method overwrites the first method
+
+--> To run the pytest file we need to add pytest runner from edit configuration in right top corner of pycharm, click + and add pytest --> Then run the file
+
+--> How to run pytest files through terminal --> Go to terminal and path of pytest package
+                                             --> 'py.test' by running this command it will run all the pytest files present in that folder
+                                             --> 'py.test -v' by running this command we will get more information about results (v means verbose)
+                                             --> 'py.test -v -s' this command shows all the print statement's output in console
+                                             --> If we run the file using test runner in pycharm then this all commands are no needed all in detailed results are shows in console
+
+--> If you want to run single pytest file --> 'py.test <file_name.py> -v -s' (v and s are optional use only if you want more info)
+
+--> To run one test method from one file and another test method from another file --> 'py.test -k <name from test method> -v -s'
+                                                                                   --> So it will search the test method from the folder and will run the test method which contains the give string
+
+--> We can tag the test methods in pytest --> Import pytest first
+                                          --> For the required method give tag @pytest.mark.<any_tagname_you_want>
+                                          --> To run test methods using use command 'py.test -m <tagname_you_given> -v -s'
+
+--> To skip the test case --> Use tag '@pytest.mark.skip'
+--> To run test case but in o/p you will not see iis it passing or failing --> Use tag '@pytest.mark.xfail'
+                                                                           --> Its status will shows as XPass, not like Pass or Fail
+
+--> Fixture method --> Before executing any test case if you want to do setup/pre-requisite required for that test case for that we use @pytest.fixtures()
+                   --> Even when we can use it to run post requisite (after successful ran of test execution) also by using 'yield' statement
+                       (PyTest/Fixture.py)
+
+--> conftest.py file  --> When fixture method is used by multiple file then instead of creating fixture method in each file we create onn 'conftest.py' file
+                      --> file name should be 'conftest.py' only
+                      --> In this file declare all the fixture methods and call them in other file's test methods as per requirements
+                          (PyTest/Use_conftest.py) & (PyTest/conftest.py)
+
+--> Fixture method using class --> When the multiple test methods are using the same fixture method then instead of passing fixture method to all of them separately,
+                                   we create the class of those test methods
+                               --> Class name should be start with 'Test'
+                               --> Use the tag @pytest.mark.usefixtures("<fixture method name from conftest file>")
+                               --> And it is imp to pass self parameter to all test methods in that class
+                                   (PyTest/test_fixture_using_Class.py)
+
+--> Data Drive --> Fixtures are also used to load the data before execution of test method
+               --> For this we return the data in fixture method
+               --> In which test method we called fixture method, data is get loaded there and can be user for further test execution
+                   (PyTest/test_fixture_Dataloading.py)
+
+--> Parameterizing the tests using multiple datasets Using Fixture --> When you want run the test case repeatedly with multiple dataset parameters
+                                                                   --> In this, we passed multiple parameters to fixture method, and test case will run number of time == number of parameters given
+                                                                       (PyTest/test_parameterising_with_multiple_dataset.py)
+
+--> Generating HTML report of pytest test case --> Install 'pip install pytest-html'
+                                               --> Run the pytest using command -- py.test --html=report.html
+                                                                                   py.test -- is the file name which you want to run and html report of it
+                                                                                   --html -- is the tag to get html report
+                                                                                   report.html -- it is name fro the html report which will create
+
+--> Logging in Python --> Used to know what is occurring while running the code
+                      --> Need to import logging
+                      --> Create a object for logging.getLogger()
+                      --> Types and Hierarchy of logs -- Debug
+                                                      -- Info
+                                                      -- Warning
+                                                      -- Error
+                                                      -- Critical
+
+--> How to use log instead of print --> We can use log to print o/p intead of using print statement
+                                        (PyTest/test_log_instead_prints.py) and (PyTest/test_fixture_Dataloading.py)
+
+--> To print the logs in your html report then run that testcase file where you used the logging method with html tag
+
+--> In python, to call the method which we declare in class, firstly we create object of the class then we call method like object.method name
+    but if you want to call the method using classname.method then mark that method as @staticmethod so that you will not required to create the object of class
+    (Selenium_Python_FW/test_AutomatedForm_using_PO.py)
+    --> For static method self parameter is not required
+

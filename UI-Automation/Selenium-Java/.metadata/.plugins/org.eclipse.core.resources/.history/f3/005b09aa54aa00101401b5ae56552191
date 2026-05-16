@@ -1,0 +1,48 @@
+/* Interface (What to do) and Class (How to do)
+ * Interface has a method but does not have any body in that method
+ * Classes also has a method and body within that
+ * Example:- WebDriver driver = new ChromeDriver();
+   The WebDriver interface defines the contract (.get(), .click(), .findElement())
+   The ChromeDriver class provides the specific implementation for that browser
+*/
+
+
+public class JavaOOPSInterfaceClass implements JavaOOPSInterfaces {
+
+	public static void main(String[] args) {
+		
+		// To call the methods present in this class, so create a object for this class and call the methods
+		JavaOOPSInterfaceClass a = new JavaOOPSInterfaceClass();
+		// JavaOOPSInterfaces a = new JavaOOPSInterfaceClass();			// This will also works, to call the methods present in this class, using from interface 'JavaOOPSInterfaces'     
+		a.redSignal();
+		a.greenSignal();
+		a.yellowSignal();
+		
+
+	}
+
+	@Override
+	public void redSignal() {
+		System.out.println("Red Signal Method Block of Execution");
+		
+	}
+
+	@Override
+	public void greenSignal() {
+		System.out.println("Green Signal Method Block of Execution");
+		
+	}
+
+	@Override
+	public void yellowSignal() {
+		System.out.println("Yellow Signal Method Block of Execution");
+		
+	}
+
+}
+
+/*  Here in this class, I have extended the class to interface JavaOOPSInterfaces
+	And what methods(without block of execution) declared in that interface should be added in in this class using warning intelligence
+	And here I will add the execution steps in this methods
+*/
+

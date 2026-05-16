@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name="My Test Suite">
+  <!-- This is first test method folder which has name='Introduction' -->
+  <test thread-count="5" name="Introduction">
+  
+ 	<groups>
+ 		<run>
+ 			<include name="Smoke"/>		<!-- This will run all the test case methods which have tag (group {name="Smoke"}) -->
+ 		</run>
+ 	</groups>
+  
+    <classes>
+      <class name="TestNGPackage.IntroductionTestNG"/>  <!-- Class name should be followed by its parent package name -->
+	  <class name="TestNGPackage.Day1"/>
+	  <class name="TestNGPackage.Day2"/>
+	  <class name="TestNGPackage.Day3"/>
+    </classes>
+    </test>
+</suite>
+
+
+<!--
+Using groups functionality of TestNG, we will be able to run some of testcases which we want to run
+For example, from all these test method I want to run few methods as part of smoke testing then
+For those each method I will put tag (group {name="Smoke"}) in @Test annotation and configure in .xml file like above
+It will only those which has this tag
+
+To run all the test cases of a suite parallel => Just put parallel="test" attribute at suite level
+-->

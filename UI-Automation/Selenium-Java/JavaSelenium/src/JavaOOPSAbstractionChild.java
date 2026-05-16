@@ -1,0 +1,43 @@
+
+public class JavaOOPSAbstractionChild extends JavaOOPSAbstractionParent {
+
+	public static void main(String[] args) {
+		JavaOOPSAbstractionChild a = new JavaOOPSAbstractionChild();			// We cannot create object for the inherited class 'JavaOOPSAbstractionParent'
+		a.childMethod1();
+		a.childMethod2();
+		a.parentMethod1();
+		a.parentMethod2();
+		a.parentAbstractMethod1();
+		a.parentAbstractMethod2();
+
+	}
+	
+	public void childMethod1() {
+		System.out.println("Child Method 1 of Parent Abstraction Class");
+	}
+	
+	public void childMethod2() {
+		System.out.println("Child Method 2 of Parent Abstraction Class");
+	}
+
+	@Override
+	public void parentAbstractMethod1() {
+		System.out.println("Abstract Method 1 of Parent Abstraction Class");
+		
+	}
+
+	@Override
+	public void parentAbstractMethod2() {
+		System.out.println("Abstract Method 2 of Parent Abstraction Class");
+		
+	}
+
+}
+
+/*  Inherited the properties of JavaOOPSAbstractionParent to JavaOOPSAbstractionChild using extends keyword
+ 	As JavaOOPSAbstractionParent class has abstracted methods, we should have to add those method in this class and write respective block of execution
+ 	To call the methods present in both Parent and Child class, create object for child class which will help to call the methods
+ 	We can create a object for the Parent class which is being inherited, because we inherited all methods in child class so create object for child class and access the methods
+	
+ 
+ */

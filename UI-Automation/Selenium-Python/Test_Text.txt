@@ -1,0 +1,7 @@
+animal
+ball
+cat
+dog
+elephant
+fish
+goat

@@ -1,0 +1,19 @@
+
+public class JavaOOPSConstructors {
+	
+	public JavaOOPSConstructors() {
+		System.out.println("I am the constructor");
+	}
+
+	public static void main(String[] args) {
+		JavaOOPSConstructors construct = new JavaOOPSConstructors();
+		
+
+	}
+
+}
+/*
+Constructor
+Its block of code which executes first when we create the object for the class
+Constructor is nothing but the method which does not return any value and should have same name as of class name
+*/

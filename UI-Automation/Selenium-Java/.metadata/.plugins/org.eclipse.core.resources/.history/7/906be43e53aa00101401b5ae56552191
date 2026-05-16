@@ -1,0 +1,41 @@
+/* Interface (What to do) and Class (How to do)
+ * Interface has a method but does not have any body in that method
+ * Classes also has a method and body within that
+ * Example:- WebDriver driver = new ChromeDriver();
+   The WebDriver interface defines the contract (.get(), .click(), .findElement())
+   The ChromeDriver class provides the specific implementation for that browser
+*/
+
+
+public class JavaOOPSInterfaceClass implements JavaOOPSInterfaces {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	@Override
+	public void redSignal() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void greenSignal() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void yellowSignal() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+/*  Here in this class, I have extended the class to interface JavaOOPSInterfaces
+	And what methods(without block of execution) declared in that interface should be added in in this class using warning intelligence
+	And here I will add the execution steps in this methods
+*/
+
